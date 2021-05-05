@@ -17,7 +17,7 @@ import static org.testng.Assert.*;
 public class MyTest extends BaseTest {
 
     private static String cookieName = "token";
-    private static String projectName = "project24";
+    private static String projectName = "project25";
     private static String testName = "test for testing the web interface and checking the work of the api";
     private static int numberAttempts = 5;
     private static int waiting = 2;
@@ -59,6 +59,7 @@ public class MyTest extends BaseTest {
         popUpForm.typeProjectName(projectName);
         popUpForm.saveProject();
         assertTrue(popUpForm.isSuccessfullySaved(), "project has not been saved");
+//      BrowserActions.closePopUp();    ERROR
         BrowserActions.closePopUpRobot();
         assertTrue(popUpForm.modalWindowIsClosed(waiting), "model window has not been closed");
         BrowserActions.refresh();

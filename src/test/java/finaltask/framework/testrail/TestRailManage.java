@@ -65,11 +65,10 @@ public class TestRailManage {
         Map data = new HashMap();
         if (result.isSuccess()) {
             data.put("status_id", TestResult.PASSED.STATUS);
-            data.put("comment", Logger.getLogCurrentTest());
         } else {
             data.put("status_id", TestResult.FAILED.STATUS);
-            data.put("comment", result.getThrowable().toString());
         }
+        data.put("comment", Logger.getLogCurrentTest());
         CLIENT.sendPost(String.format("add_result_for_case/%s/%s", runId, caseId), data);
     }
 

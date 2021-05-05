@@ -17,7 +17,7 @@ import static org.testng.Assert.*;
 public class MyTest extends BaseTest {
 
     private static String cookieName = "token";
-    private static String projectName = "project25";
+    private static String projectName = "project26";
     private static String testName = "test for testing the web interface and checking the work of the api";
     private static int numberAttempts = 5;
     private static int waiting = 2;
